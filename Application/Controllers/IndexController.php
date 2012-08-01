@@ -1,4 +1,9 @@
 <?php
+include_once 'Album\Controller\Action.php';
+//include_once 'd:\wamp\www\zf-tutorial\library\Album\Controller\Action.php'; 
+//include_once 'd:\wamp\www\zf-tutorial\Application\models\Album.php';
+include_once 'Album.php';
+
 class IndexController extends Album_Controller_Action {
 // 	function indexAction() {
 // 		echo "<p>in IndexController::indexAction()</p>";
@@ -24,7 +29,7 @@ class IndexController extends Album_Controller_Action {
 	
 	function indexAction() {
 		$this->view->title = "My Albums";
-		$album = new Album();		
+		$album = new  Album();		
 		$this->view->albums = $album->fetchAll();		
 	}
 

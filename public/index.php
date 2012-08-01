@@ -7,7 +7,7 @@ date_default_timezone_set('Europe/London');
 // 		. PATH_SEPARATOR . get_include_path());
 
 
-set_include_path('.' . PATH_SEPARATOR . '../library'
+set_include_path('.' . PATH_SEPARATOR . '../library/' 
 		. PATH_SEPARATOR . '../application/models/'
 		. PATH_SEPARATOR . get_include_path());
 
@@ -21,7 +21,7 @@ set_include_path('.' . PATH_SEPARATOR . '../library'
 
 //If class not found instanciate it automatically
 require_once "Zend/Loader/Autoloader.php";
-$autoloader = Zend_Loader_Autoloader::getInstance();
+Zend_Loader_Autoloader::getInstance();
 
 // load configuration
 $config = new Zend_Config_Ini('../application/config.ini', 'general');
